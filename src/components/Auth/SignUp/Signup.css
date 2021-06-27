@@ -1,0 +1,95 @@
+
+
+.Signup_Card .Auth_Card_Right {
+    padding: 2rem;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.904);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transform: translateX(50vw);
+    transition: all 400ms ease-in-out;
+}
+
+.Signup_Card .Auth_Card_Right h1 {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #4b4e50;
+    text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs> div {
+    width: 85%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs> div svg {
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs> div p {
+    margin-top: 0.5rem;
+    margin-left: 0.1rem;
+    font-size: 0.7rem;
+    color: red;
+    text-align: left;
+    position: absolute;
+    bottom: -1.1rem;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .MuiFormControl-root.MuiTextField-root {
+    width: 100%;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .MuiFormControl-root label.MuiFormLabel-root.Mui-focused {
+    color: #014A7E;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .MuiFormControl-root .MuiInput-underline::after {
+    border-bottom: 2px solid #014A7E;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .Auth_button {
+    margin-top: 3rem;
+    border: none;
+    outline: none;
+    background-color: #025794;
+    color: white;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.301);
+    transition: all 200ms ease-in-out;
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .Auth_button:hover {
+    background-color: #014A7E;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.301);
+}
+
+.Signup_Card .Auth_Card_Right .Auth_inputs .Auth_button:disabled {
+    background-color: grey;
+    cursor: unset;
+}

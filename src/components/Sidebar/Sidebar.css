@@ -1,0 +1,24 @@
+.Sidebar {
+    width: 20rem;
+    height: 100vh;
+    /* background-color: rgb(255, 198, 42); */
+}
+
+.Sidebar .Sidebar_Head {
+    padding: 1rem 0;
+}
+
+.Sidebar .Sidebar_List {
+    padding: 1.5rem 0;
+}
+
+.Sidebar .Sidebar_List .Sidebar_Element {
+    cursor: pointer;
+    display: flex;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.Sidebar .Sidebar_List .Sidebar_Element .Sidebar_Element_Icon {
+    margin: 0 1rem;
+}
