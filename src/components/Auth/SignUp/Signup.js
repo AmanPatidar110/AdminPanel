@@ -25,14 +25,8 @@ function Signup() {
     const [confPasswordError, setConfPasswordError] = useState({ msg: "", validity: false })
 
     const [style, setStyle] = useState();
-    var temp;
-    const clickRedirection = () => {
-        setStyle({
-            transform: "translateX(-100vw)",
-            opacity: "0"
-        })
-        temp = setTimeout(() => { linkStack.replace("/login") }, 500)
-    }
+
+
     
     useEffect(() => {
         setStyle({
@@ -97,12 +91,20 @@ function Signup() {
         postSignUp(name, password, email)
     }
 
+    const clickRedirection = () => {
+        setStyle({
+            transform: "translateX(-100vw)",
+            opacity: "0"
+        })
+        setTimeout(() => { linkStack.replace("/login") }, 400)
+    }
+
 
 
     return (
-        <div className="Auth_Card_Right" style={style} >
-            <h1>Ekank</h1>
-            <form className="Auth_inputs" noValidate autoComplete="off">
+        <div className="Auth_Card_Right"  >
+            <h1>EKANK</h1>
+            <form className="Auth_inputs" style={style} noValidate autoComplete="off">
                 <div>
                     <TextField id="standard-basic" label="Full Name" onKeyDown={(e) => { validateField("name", e.target.value, e) }} />
                     {nameError.msg ? <p>{nameError.msg}</p> : null}
@@ -114,7 +116,7 @@ function Signup() {
                 <div>
                     <TextField type={passwordVisibility === "hidden" ? "password" : "text"} id="standard-basic" label="Password" onKeyDown={(e) => { validateField("password", e.target.value, e) }} />
                     {passwordError.msg ? <p>{passwordError.msg}</p> : null}
-                    {passwordVisibility === "hidden" ? <span onClick={() => { setPasswordVisibility("show") }}> <VisibilityIcon /></span> : <span onClick={() => { setPasswordVisibility("hidden") }}> <VisibilityOffIcon /></span>}
+                    {passwordVisibility !== "hidden" ? <span onClick={() => { setPasswordVisibility("hidden") }}> <VisibilityIcon /></span> : <span onClick={() => { setPasswordVisibility("show") }}> <VisibilityOffIcon /></span>}
                 </div>
                 <div>
                     <TextField type={passwordVisibility === "hidden" ? "password" : "text"} id="standard-basic" label="Confirm Password" onKeyDown={(e) => { validateField("confirmPassword", e.target.value, e) }} />
